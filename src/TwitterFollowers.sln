@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterFollowers.Web", "TwitterFollowers.Web\TwitterFollowers.Web.csproj", "{7C2D1224-1141-4633-A4EB-0469CE0A56EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterFollowers.Console", "TwitterFollowers.Console\TwitterFollowers.Console.csproj", "{BCF3E20E-31DE-4010-BEB1-B3821285B864}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{A4AD5F8E-A01E-4B66-8EB2-D6797E9E6D88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI", "..\..\TwitterOAuthRESTAPI\src\RestAPI\RestAPI.csproj", "{707A2DEE-4F5B-4F5A-9DA4-771806C07191}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestAPI.Tests", "..\..\TwitterOAuthRESTAPI\src\RestAPI.Tests\RestAPI.Tests.csproj", "{03D1C930-7EA9-435B-89FA-CCF5608BC9EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C2D1224-1141-4633-A4EB-0469CE0A56EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2D1224-1141-4633-A4EB-0469CE0A56EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2D1224-1141-4633-A4EB-0469CE0A56EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2D1224-1141-4633-A4EB-0469CE0A56EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF3E20E-31DE-4010-BEB1-B3821285B864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF3E20E-31DE-4010-BEB1-B3821285B864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF3E20E-31DE-4010-BEB1-B3821285B864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF3E20E-31DE-4010-BEB1-B3821285B864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{707A2DEE-4F5B-4F5A-9DA4-771806C07191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707A2DEE-4F5B-4F5A-9DA4-771806C07191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{707A2DEE-4F5B-4F5A-9DA4-771806C07191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{707A2DEE-4F5B-4F5A-9DA4-771806C07191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D1C930-7EA9-435B-89FA-CCF5608BC9EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D1C930-7EA9-435B-89FA-CCF5608BC9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D1C930-7EA9-435B-89FA-CCF5608BC9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D1C930-7EA9-435B-89FA-CCF5608BC9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{707A2DEE-4F5B-4F5A-9DA4-771806C07191} = {A4AD5F8E-A01E-4B66-8EB2-D6797E9E6D88}
+		{03D1C930-7EA9-435B-89FA-CCF5608BC9EA} = {A4AD5F8E-A01E-4B66-8EB2-D6797E9E6D88}
+	EndGlobalSection
+EndGlobal

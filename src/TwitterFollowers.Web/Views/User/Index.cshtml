@@ -1,0 +1,94 @@
+﻿@model IEnumerable<TwitterFollowers.Web.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create") |
+    @Html.ActionLink("Regenerate Friends", "RegenerateFriends")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.ActionLink("Id", "Index", new { sortOrder = ViewBag.IdSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("User", "Index", new { sortOrder = ViewBag.UserSortParm })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfileImageUrl)
+        </th>
+        <th>
+            Photo
+        </th>
+        <th>
+            @Html.ActionLink("Followers", "Index", new { sortOrder = ViewBag.FollowersSortParm })
+        </th>
+        <th>
+            Friends
+        </th>
+        <th>
+            @Html.ActionLink("Following?", "Index", new { sortOrder = ViewBag.FollowingSortParm })
+        </th>
+        <th>
+            Auto-Added?
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="/User/Details/@Html.DisplayFor(modelItem => item.Id)">@Html.DisplayFor(modelItem => item.Id)</a>
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.Name)
+
+                @if (item.ScreenName != null)
+                {
+                    @Html.Raw("(<a target=\"_blank\" href=\"https://twitter.com/" + @Html.DisplayFor(modelItem => item.ScreenName) + "\">@" + @Html.DisplayFor(modelItem => item.ScreenName) + "</a>)");
+
+                    //<a target="_blank" href="https://twitter.com/@Html.DisplayFor(modelItem => item.ScreenName)">@@@Html.DisplayFor(modelItem => item.ScreenName)</a>
+                }
+            </td>
+            <td>
+                @if (item.ProfileImageUrl != null)
+                {
+                    <img src="@Html.DisplayFor(modelItem => item.ProfileImageUrl)" />
+                }
+            </td>
+            <td>
+                @if (item.Url != null)
+                {
+                    <a target="_blank" href="@Html.DisplayFor(modelItem => item.Url)">link</a>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FollowersCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FriendsCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Following)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AutoAdded)
+            </td>
+            <td>
+                @Html.ActionLink("Load", "Load", new { id = item.Id }) |
+                @Html.ActionLink("Find", "Find", new { id = item.Id }) @*|
+                    @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            </td>
+        </tr>
+    }
+
+</table>
